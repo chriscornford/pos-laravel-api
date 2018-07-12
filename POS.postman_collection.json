@@ -1,0 +1,80 @@
+{
+	"info": {
+		"_postman_id": "cd97d760-ac47-4bd6-a418-49063a555d21",
+		"name": "POS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Products collection",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://pos-laravel-api.test/api/product",
+					"protocol": "http",
+					"host": [
+						"pos-laravel-api",
+						"test"
+					],
+					"path": [
+						"api",
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Purchases collection",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://pos-laravel-api.test/api/purchase",
+					"protocol": "http",
+					"host": [
+						"pos-laravel-api",
+						"test"
+					],
+					"path": [
+						"api",
+						"purchase"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create purchase resource",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"items\": [\n\t\t{\n\t\t\t\"id\": 1,\n\t\t\t\"quantity\": 1\n\t\t},\n\t\t{\n\t\t\t\"id\": 2,\n\t\t\t\"quantity\": 2\n\t\t}\n\t] \n}"
+				},
+				"url": {
+					"raw": "http://pos-laravel-api.test/api/purchase",
+					"protocol": "http",
+					"host": [
+						"pos-laravel-api",
+						"test"
+					],
+					"path": [
+						"api",
+						"purchase"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
