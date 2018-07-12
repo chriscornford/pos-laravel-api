@@ -17,3 +17,7 @@ use App\Http\Resources\ProductCollection;
 Route::get('/product', function () {
     return new ProductCollection(Product::all());
 });
+
+Route::resource('purchase', 'PurchaseController')->only([
+    'index', 'store'
+]);;
